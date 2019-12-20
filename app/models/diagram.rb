@@ -1,12 +1,13 @@
 class Diagram < ApplicationRecord
   def schema
-    return %{
-graph TD
+    return %{graph TD
   A[Christmas] -->|Get money| B(Go shopping)
-  B --> C{Let me think}
-  C -->|One| D[Laptop]
-  C -->|Two| E[iPhone]
-  C -->|Three| F[fa:fa-car Car]
+  B --> C{Has enough money}
+  C -->|Yes| D[Buy something cool]
+  C -->|No| G[Buy materails]
+  G --> H[Make something]
+  D --> F[Give present]
+  H --> F
 
   } if version.blank?
   end

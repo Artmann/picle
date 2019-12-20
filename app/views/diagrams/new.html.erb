@@ -1,10 +1,5 @@
 <div>
   <%= form_for @diagram do |f| %>
-
-    <div>
-      <%= f.text_field :title, value: 'Untitled' %>
-    </div>
-
     <div>
       <%= component 'diagram-editor', schema: @diagram.schema %>
     </div>
