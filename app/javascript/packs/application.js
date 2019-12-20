@@ -17,3 +17,14 @@ require("channels")
 // const imagePath = (name) => images(name, true)
 
 import './stylesheets.css'
+import { render } from 'react-dom'
+import { createElement } from 'react'
+
+window.renderComponent = function(name, target, props = {}) {
+  import(/* webpackChunkName: "[request]" */ `../components/${name}`).then(({ default: component }) => {
+    render(
+      createElement(component, props),
+      target
+    );
+  });
+}

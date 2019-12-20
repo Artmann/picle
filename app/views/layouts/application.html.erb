@@ -7,9 +7,12 @@
 
     <%= stylesheet_pack_tag 'stylesheets', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,700|Montserrat:300&display=swap" rel="stylesheet">
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container mx-auto">
+      <%= yield %>
   </body>
 </html>

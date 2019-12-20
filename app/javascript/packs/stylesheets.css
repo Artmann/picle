@@ -1,8 +1,13 @@
 body {
+  font-family: 'Fira Sans', sans-serif;
   font-size: 16px;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
 }
 
 @tailwind base;
@@ -10,3 +15,13 @@ body {
 @tailwind components;
 
 @tailwind utilities;
+
+.btn {
+  @apply font-bold py-2 px-4 rounded inline-block;
+}
+.btn-blue {
+  @apply bg-blue-500 text-white;
+}
+.btn-blue:hover {
+  @apply bg-blue-700;
+}
